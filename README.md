@@ -5,6 +5,16 @@
 Este proyecto es el resultado del laboratorio realizado para aprender y practicar Next.js. Incluye ejemplos básicos de renderizado del lado del cliente (CSR) y del servidor (SSR), además de una tarea práctica con una lista de productos que pueden filtrarse por categoría usando React hooks (`useState` y `useEffect`).
 
 ---
+### Vista de la página de inicio
+
+![Página de inicio](./src/imagenes/1.png)
+
+---
+
+### Vista de la página de tarea (lista de productos)
+
+![Página de tarea](./src/imagenes/2.png)
+
 
 ## Estructura del proyecto
 
