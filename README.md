@@ -7,13 +7,13 @@ Este proyecto es el resultado del laboratorio realizado para aprender y practica
 ---
 ### Vista de la página de inicio
 
-![Página de inicio](./src/imagenes/1.png)
+![Página de inicio](https://github.com/NinaDIV/Hola-mundo-en-nextjs/blob/main/nextjs-lab/hola-mundo/src/imagenes/1.png?raw=true)
 
 ---
 
 ### Vista de la página de tarea (lista de productos)
 
-![Página de tarea](./src/imagenes/2.png)
+![Página de tarea](.https://github.com/NinaDIV/Hola-mundo-en-nextjs/blob/main/nextjs-lab/hola-mundo/src/imagenes/2.png?raw=true)
 
 
 ## Estructura del proyecto
