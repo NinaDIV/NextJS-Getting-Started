@@ -15,7 +15,11 @@ const Navbar = () => {
             Inicio
           </Link>
           <Link href="/tarea" className="text-white hover:text-gray-300">
-            Tarea
+            ProductosCSR
+          </Link>
+             {/* Enlace a la página de productos */}
+            <Link href="/products" className="text-white hover:text-blue-300 transition">
+            ProductosAPI
           </Link>
           <Link href="/about" className="text-white hover:text-gray-300">
             Acerca de
