@@ -27,7 +27,7 @@ Este proyecto es el resultado del laboratorio realizado para aprender y practica
 
 ## Cómo ejecutar el proyecto
 
-- Clonar este repositori
+- Clonar este repositorio
 - Instalar las dependencias
 
   ```bash
