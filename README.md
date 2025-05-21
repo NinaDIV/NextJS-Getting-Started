@@ -41,3 +41,5 @@ Este proyecto es el resultado del laboratorio realizado para aprender y practica
 
   ```bash
   npm install
+
+  npm run dev
