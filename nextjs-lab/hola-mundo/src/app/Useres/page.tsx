@@ -1,14 +1,16 @@
-'use client';  // Agrega esta línea al inicio del archivo
+'use client';
 
 import { useState, useEffect } from 'react';
 import Button from '../components/Button'; // Importar el componente Button
 import UserCard from '../components/Usercard'; // Importar el componente UserCard
 
 export default function ProfilePage() {
-  const [users, setUsers] = useState<any[]>([]); // Almacenamos los usuarios
+  const [users, setUsers] = useState<any[]>([]); // Almacenamos todos los usuarios
   const [filteredUsers, setFilteredUsers] = useState<any[]>([]); // Almacenamos los usuarios filtrados
   const [loading, setLoading] = useState(true);
   const [genderFilter, setGenderFilter] = useState<string>(''); // Filtro por género
+  const [currentPage, setCurrentPage] = useState(1); // Página actual
+  const usersPerPage = 10; // Número de usuarios por página
 
   useEffect(() => {
     // Obtener usuarios de la API de DummyJSON
@@ -33,7 +35,16 @@ export default function ProfilePage() {
     } else {
       setFilteredUsers(users.filter((user) => user.gender === gender));
     }
+    setCurrentPage(1); // Reiniciar la paginación al cambiar el filtro
   };
+
+  // Paginación: calcular los usuarios a mostrar según la página actual
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = filteredUsers.slice(indexOfFirstUser, indexOfLastUser);
+
+  // Funciones de cambio de página
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   if (loading) {
     return (
@@ -42,6 +53,9 @@ export default function ProfilePage() {
       </div>
     );
   }
+
+  // Número total de páginas
+  const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100">
@@ -68,7 +82,7 @@ export default function ProfilePage() {
 
       {/* Muestra los usuarios filtrados */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {filteredUsers.map((user) => (
+        {currentUsers.map((user) => (
           <UserCard
             key={user.id}
             name={`${user.firstName} ${user.lastName}`}
@@ -77,6 +91,22 @@ export default function ProfilePage() {
             gender={user.gender}
           />
         ))}
+      </div>
+
+      {/* Paginación */}
+      <div className="mt-6 flex space-x-2">
+        <Button
+          onClick={() => paginate(currentPage - 1)}
+          label="Anterior"
+          color="bg-gray-400"
+          disabled={currentPage === 1}
+        />
+        <Button
+          onClick={() => paginate(currentPage + 1)}
+          label="Siguiente"
+          color="bg-gray-400"
+          disabled={currentPage === totalPages}
+        />
       </div>
 
       <footer className="mt-8 text-sm text-gray-500">
