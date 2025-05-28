@@ -27,6 +27,9 @@ const Navbar = () => {
           <Link href="/contacto" className="text-white hover:text-gray-300">
            Contacto
           </Link>
+          <Link href="/Useres" className="text-white hover:text-gray-300">
+          UserCard 
+          </Link>
         </div>
       </div>
     </nav>

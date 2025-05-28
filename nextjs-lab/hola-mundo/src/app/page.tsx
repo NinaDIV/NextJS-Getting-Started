@@ -1,6 +1,8 @@
 'use client';
 
 import Link from 'next/link';
+import UserCard from './components/Usercard'; // Importa el componente UserCard
+
 
 export default function HomePage() {
   return (
@@ -13,7 +15,7 @@ export default function HomePage() {
         además de un proyecto práctico con una lista de productos filtrados por categoría utilizando React Hooks.
       </p>
       
-      <div className="flex space-x-6">
+      <div className="flex space-x-6 mb-8">
         <Link href="/tarea" passHref>
           <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
             Ver Productos
@@ -25,7 +27,6 @@ export default function HomePage() {
           </button>
         </Link>
       </div>
-    
       <footer className="mt-8 text-sm text-gray-500">
         <p>Hecho con ❤️ por NinaDIV</p>
       </footer>
