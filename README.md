@@ -40,6 +40,8 @@ Este proyecto es el resultado del laboratorio realizado para aprender y practica
 - Instalar las dependencias
 
   ```bash
+
+  cd Hola-mundo-en-nextjs\nextjs-lab\hola-mundo>
   npm init -y
 
   npm install
