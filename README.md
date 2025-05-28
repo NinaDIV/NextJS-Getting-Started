@@ -43,8 +43,7 @@ Este proyecto es el resultado del laboratorio realizado para aprender y practica
 
   cd Hola-mundo-en-nextjs\nextjs-lab\hola-mundo>
 
-  (opcional : en caso de estar en un red con proxies o certificados interceptados: npm config set strict-ssl false
-)
+  (opcional : en caso de estar en un red con proxies o certificados interceptados: npm config set strict-ssl false)
   
   npm install
 
