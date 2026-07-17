@@ -1,8 +1,10 @@
-# Hola Mundo en Next.js - Laboratorio
+# Next.js - Getting Started
 
-## Descripción
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-Este proyecto es el resultado del laboratorio realizado para aprender y practicar Next.js. Incluye ejemplos básicos de renderizado del lado del cliente (CSR) y del servidor (SSR), además de una tarea práctica con una lista de productos que pueden filtrarse por categoría usando React hooks (`useState` y `useEffect`).
+Laboratorio practico de **Next.js** con ejemplos de renderizado del lado del cliente (CSR) y del servidor (SSR). Incluye una lista de productos filtrable por categoria usando React hooks (`useState` y `useEffect`).
 
 ---
 ### Vista de la página de inicio
